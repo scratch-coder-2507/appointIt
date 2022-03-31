@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="assets/production/css/home.min.css">
 
@@ -44,14 +44,18 @@
                                 </h2>
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne.
+                                Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum
+                                has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi
+                                singulis. Sea ocurreret principes ne.
                                 <br>
                             </p>
                             <div class="progress-gallery main-prog">
                                 <div class="bar-container">
                                     <p>Neurology</p>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-custom" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
+                                        <div class="progress-bar progress-bar-success progress-bar-custom"
+                                            role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 95%; background-color: rgb(16, 165, 115)">
                                         </div>
                                     </div>
                                     <div class="percentage-show">95%</div>
@@ -59,7 +63,9 @@
                                 <div class="bar-container">
                                     <p>Dentistry</p>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-custom" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                        <div class="progress-bar progress-bar-success progress-bar-custom"
+                                            role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 80%;background-color: rgb(16, 165, 115)">
                                         </div>
                                     </div>
                                     <div class="percentage-show">80%</div>
@@ -67,7 +73,9 @@
                                 <div class="bar-container">
                                     <p>Radiology</p>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-custom" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%">
+                                        <div class="progress-bar progress-bar-success progress-bar-custom"
+                                            role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 88%;background-color: rgb(16, 165, 115)">
                                         </div>
                                     </div>
                                     <div class="percentage-show">88%</div>
@@ -75,7 +83,9 @@
                                 <div class="bar-container">
                                     <p>Cardiology</p>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-custom" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%">
+                                        <div class="progress-bar progress-bar-success progress-bar-custom"
+                                            role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 82%; background-color: rgb(16, 165, 115)">
                                         </div>
                                     </div>
                                     <div class="percentage-show">82%</div>
@@ -84,7 +94,9 @@
                         </div>
                     </div>
                     <div class="m-auto">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-Fdo_HT3X80" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-Fdo_HT3X80"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -104,40 +116,61 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="choose-item flex" style="background-image: url(assets/images/cloak.JPEG)">
+                        <style>
+                            #newItem:before {
+                                background-color: rgb(16, 165, 115);
+                            }
+                        </style>
+                        <div id="newItem" class="choose-item flex"
+                            style="background-image: url(assets/images/cloak.JPEG);">
                             <div class="choose-icon">
                                 <i class="fas fa-clock fa-3x" aria-hidden="true"></i>
                             </div>
                             <div class="choose-text">
                                 <h4>QUICK RESPONSE</h4>
                                 <p>
-                                    Iisque persius ne sit, simul zril vix eu. Qui ne iusto epicuri suscipiantur, sit ne probo adhuc. Liber verterem interpretaris nam et, ea pro solum expetendis.
+                                    Iisque persius ne sit, simul zril vix eu. Qui ne iusto epicuri suscipiantur, sit ne
+                                    probo adhuc. Liber verterem interpretaris nam et, ea pro solum expetendis.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="choose-item flex" style="background-image: url(assets/images/satisfication.JPEG)">
+                        <style>
+                            #newItem:before {
+                                background-color: rgb(16, 165, 115);
+                            }
+                        </style>
+                        <div id="newItem" class="choose-item flex"
+                            style="background-image: url(assets/images/satisfication.JPEG)">
                             <div class="choose-icon">
                                 <i class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i>
                             </div>
                             <div class="choose-text">
                                 <h4>100% SATISFACTION</h4>
                                 <p>
-                                    Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones, ne mundi volutpat duo, in dissentias temporibus pri. Duo ferri dicant definitionem te.
+                                    Duo luptatum delicata evertitur ad. Usu te quaerendum definitiones, ne mundi
+                                    volutpat duo, in dissentias temporibus pri. Duo ferri dicant definitionem te.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="choose-item flex" style="background-image: url(assets/images/qualityservice.JPEG)">
+                        <style>
+                            #newItem:before {
+                                background-color: rgb(16, 165, 115);
+                            }
+                        </style>
+                        <div id="newItem" class="choose-item flex"
+                            style="background-image: url(assets/images/qualityservice.JPEG)">
                             <div class="choose-icon">
                                 <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
                             </div>
                             <div class="choose-text">
                                 <h4>QUALITY SERVICE</h4>
                                 <p>
-                                    Amet dolor oratio ex has, stet repudiare definiebas vim ne. Id probo facilisis usu, pri aliquam omnesque cu. Vide assentior id qui, quando possim eos.
+                                    Amet dolor oratio ex has, stet repudiare definiebas vim ne. Id probo facilisis usu,
+                                    pri aliquam omnesque cu. Vide assentior id qui, quando possim eos.
                                 </p>
                             </div>
                         </div>
@@ -169,7 +202,8 @@
                             <div class="feature-text">
                                 <h4>Planned Space Design</h4>
                                 <p>
-                                    Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an in dolore.
+                                    Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an in
+                                    dolore.
                                 </p>
                             </div>
                         </div>
@@ -183,7 +217,8 @@
                             <div class="feature-text">
                                 <h4>Good Medical Facilities</h4>
                                 <p>
-                                    Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno.
+                                    Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et,
+                                    te aeterno.
                                 </p>
                             </div>
                         </div>
@@ -197,7 +232,8 @@
                             <div class="feature-text">
                                 <h4>Best Ambulance Service</h4>
                                 <p>
-                                    Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no.
+                                    Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi
+                                    postulant vel no.
                                 </p>
                             </div>
                         </div>
@@ -211,7 +247,8 @@
                             <div class="feature-text">
                                 <h4>Computerized Platform</h4>
                                 <p>
-                                    Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit.
+                                    Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique,
+                                    quo possit.
                                 </p>
                             </div>
                         </div>
@@ -225,7 +262,8 @@
                             <div class="feature-text">
                                 <h4>Reduced Supervision</h4>
                                 <p>
-                                    Vis constituto complectitur an, modo falli eirmod ea has. Ex vis indoctum scriptorem appellantur.
+                                    Vis constituto complectitur an, modo falli eirmod ea has. Ex vis indoctum scriptorem
+                                    appellantur.
                                 </p>
                             </div>
                         </div>
@@ -239,7 +277,8 @@
                             <div class="feature-text">
                                 <h4>Modern Technology</h4>
                                 <p>
-                                    Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in eam.
+                                    Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in
+                                    eam.
                                 </p>
                             </div>
                         </div>
@@ -265,12 +304,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="/view2" class="image-effect">
-                                <div class="services-photo" style="background-image: url(assets/images/newborn.JPEG)"></div>
+                                <div class="services-photo" style="background-image: url(assets/images/newborn.JPEG)">
+                                </div>
                             </a>
                             <div class="services-text">
                                 <h3><a href="/view2">Newborn Care</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -281,12 +322,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="/view2" class="image-effect">
-                                <div class="services-photo" style="background-image: url(assets/images/mothercare.JPEG)"></div>
+                                <div class="services-photo"
+                                    style="background-image: url(assets/images/mothercare.JPEG)"></div>
                             </a>
                             <div class="services-text">
                                 <h3><a href="/view2">Mother Care</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -297,12 +340,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="/view2" class="image-effect">
-                                <div class="services-photo" style="background-image: url(assets/images/criticaltreatement.JPEG)"></div>
+                                <div class="services-photo"
+                                    style="background-image: url(assets/images/criticaltreatement.JPEG)"></div>
                             </a>
                             <div class="services-text">
                                 <h3><a href="/view2">Critical Treatment</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -318,7 +363,8 @@
                             <div class="services-text">
                                 <h3><a href="/view2">Modern Laboratory</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -329,12 +375,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="/view2" class="image-effect">
-                                <div class="services-photo" style="background-image: url(assets/images/test.JPEG)"></div>
+                                <div class="services-photo" style="background-image: url(assets/images/test.JPEG)">
+                                </div>
                             </a>
                             <div class="services-text">
                                 <h3><a href="/view2">All Major Tests</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -345,12 +393,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="services-item effect-item">
                             <a href="/view2" class="image-effect">
-                                <div class="services-photo" style="background-image: url(assets/images/dental.JPEG)"></div>
+                                <div class="services-photo" style="background-image: url(assets/images/dental.JPEG)">
+                                </div>
                             </a>
                             <div class="services-text">
                                 <h3><a href="/view2">Dental Care</a></h3>
                                 <p>
-                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum entum has. Latine propriae quo no unum.
+                                    Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argum
+                                    entum has. Latine propriae quo no unum.
                                 </p>
                                 <div class="button-bn">
                                     <a href="/view2">Read More <i class="fa fa-chevron-circle-right"></i></a>
@@ -373,7 +423,9 @@
                             <div class="item">
                                 <div class="shadow-effect">
                                     <img class="img-circle" src="assets/images/pat1.JPEG" alt="uesr1">
-                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.
+                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                        Completely synergize resource taxing relationships via premier niche markets.
+                                        Professionally cultivate.
                                     </p>
                                 </div>
                                 <div class="testimonial-name">EMILIANO AQUILANI</div>
@@ -384,7 +436,9 @@
                             <div class="item">
                                 <div class="shadow-effect">
                                     <img class="img-circle" src="assets/images/pat2.JPEG" alt="user2">
-                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.
+                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                        Completely synergize resource taxing relationships via premier niche markets.
+                                        Professionally cultivate.
                                     </p>
                                 </div>
                                 <div class="testimonial-name">ANNA ITURBE</div>
@@ -395,7 +449,9 @@
                             <div class="item">
                                 <div class="shadow-effect">
                                     <img class="img-circle" src="assets/images/pat3.JPEG" alt="user3">
-                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.
+                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                        Completely synergize resource taxing relationships via premier niche markets.
+                                        Professionally cultivate.
                                     </p>
                                 </div>
                                 <div class="testimonial-name">LARA ATKINSON</div>
@@ -406,7 +462,9 @@
                             <div class="item">
                                 <div class="shadow-effect">
                                     <img class="img-circle" src="assets/images/doc1.JPEG" alt="user4">
-                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.
+                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                        Completely synergize resource taxing relationships via premier niche markets.
+                                        Professionally cultivate.
                                     </p>
                                 </div>
                                 <div class="testimonial-name">IAN OWEN</div>
@@ -417,7 +475,9 @@
                             <div class="item">
                                 <div class="shadow-effect">
                                     <img class="img-circle" src="assets/images/doc2.JPEG" alt="user4">
-                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.
+                                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                        Completely synergize resource taxing relationships via premier niche markets.
+                                        Professionally cultivate.
                                     </p>
                                 </div>
                                 <div class="testimonial-name">MICHAEL TEDDY</div>
@@ -435,7 +495,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {
