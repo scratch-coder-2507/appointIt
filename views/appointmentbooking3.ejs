@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="/assets/production/css/appointmentbooking3.min.css">
 
@@ -59,7 +59,9 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="patientRegistration" role="tabpanel">
-                                    <form action="/patienthome/bookappointment/<%= data.patientid %>/<%= data.disease %>/<%= data.doctorid %>" method="POST" accept-charset="utf-8">
+                                    <form
+                                        action="/patienthome/bookappointment/<%= data.patientid %>/<%= data.disease %>/<%= data.doctorid %>"
+                                        method="POST" accept-charset="utf-8">
                                         <div class="form-row row mt_20">
                                             <div class="form-row row mt_20 text-center">
                                                 <div class="form-group col-12">
@@ -68,26 +70,43 @@
                                                         <div class="content">
 
                                                             <div class="area-buttons">
-                                                                <button class="info" name="pastDates" style="display: none;">Disable past dates</button>
-                                                                <button class="info" name="availableDates" style="display: none;">Set available
-                                  dates</button>
-                                                                <button class="info" name="availableWeekDays" style="display: none;">Set available
-                                  weekdays</button>
+                                                                <button class="info" name="pastDates"
+                                                                    style="display: none;">Disable past dates</button>
+                                                                <button class="info" name="availableDates"
+                                                                    style="display: none;">Set available
+                                                                    dates</button>
+                                                                <button class="info" name="availableWeekDays"
+                                                                    style="display: none;">Set available
+                                                                    weekdays</button>
                                                             </div>
 
-                                                            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+                                                            <div id="myCalendar" class="vanilla-calendar"
+                                                                style="margin-bottom: 20px"></div>
                                                             <div style="display: table;">
-                                                                <p style="margin-left: 5.4rem; display: table-cell;">Chosen Date: </p><input type="text" id="ChosenConvertedDate" name="ChosenConvertedDate" style="display: table-cell;" readonly required></input><br />
+                                                                <p style="margin-left: 5.4rem; display: table-cell;">
+                                                                    Chosen Date: </p><input type="text"
+                                                                    id="ChosenConvertedDate" name="ChosenConvertedDate"
+                                                                    style="display: table-cell;" readonly
+                                                                    required></input><br />
                                                                 <br>
-                                                                <p style="margin-left: 5.4rem; display: table-cell;">Time: </p><input type="text" id="ChosenTime" name="ChosenTime" style="display: table-cell;" readonly required></input>
-                                                                <br /><input type="text" id="ChosenDate" name="ChosenDate" style="display: none;"></input>
-                                                                <div id="DataId" data-sortedpatient='<%= data.sortedpatient %>' data-currentappointment="<%= data.user.CurrentAppointmentDate %>" data-currentdisease="<%= data.user.CurrentDisease %>" data-status="<%= data.user.status %>"></div>
+                                                                <p style="margin-left: 5.4rem; display: table-cell;">
+                                                                    Time: </p><input type="text" id="ChosenTime"
+                                                                    name="ChosenTime" style="display: table-cell;"
+                                                                    readonly required></input>
+                                                                <br /><input type="text" id="ChosenDate"
+                                                                    name="ChosenDate" style="display: none;"></input>
+                                                                <div id="DataId"
+                                                                    data-sortedpatient='<%= data.sortedpatient %>'
+                                                                    data-currentappointment="<%= data.user.CurrentAppointmentDate %>"
+                                                                    data-currentdisease="<%= data.user.CurrentDisease %>"
+                                                                    data-status="<%= data.user.status %>"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-12 text-center mb-3">
-                                                    <button type="submit" class="btn" name="form_registration"> Next </button>
+                                                    <button type="submit" class="btn" name="form_registration"> Next
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,7 +143,7 @@
                 }
 
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {
@@ -181,7 +200,7 @@
                     }
                 })
 
-                var PastDateFunction = function() {
+                var PastDateFunction = function () {
                     pastDates = !pastDates
                     calendar.set({
                         pastDates: pastDates
@@ -190,7 +209,7 @@
                     AvailableWeekDaysFunction()
                 }
 
-                var AvailableWeekDaysFunction = function() {
+                var AvailableWeekDaysFunction = function () {
                     availableWeekDays = !availableWeekDays
                     btnAvailableWeekDays.innerText = `${(availableWeekDays ? 'Clear available weekdays' : 'Set available weekdays')}`
                     if (!availableWeekDays) {

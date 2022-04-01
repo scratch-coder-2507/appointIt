@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="assets/production/css/loginRegister.min.css">
 
@@ -43,14 +43,25 @@
                         <div class="faq-group headstyle mt-30 contact-form">
                             <div id="accordion">
                                 <div class="faq-item card">
+                                    <style>
+                                        .faq-header button.faq-button.collapsed:hover,
+                                        .faq-header button.faq-button {
+                                            background: rgb(16, 165, 115);
+                                        }
+                                    </style>
                                     <div class="faq-header" id="heading1">
-                                        <button class="faq-button " data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><i class="fa fa-caret-right"></i> View Current Appointments </button>
+                                        <button class="faq-button " data-toggle="collapse" data-target="#collapse1"
+                                            aria-expanded="true" aria-controls="collapse1"><i
+                                                class="fa fa-caret-right"></i> View Current Appointments </button>
                                     </div>
-                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <ol>
-                                                <% if(data.futureappointment !=undefined && data.futureappointment.length> 0) { %>
-                                                    <% data.futureappointment.forEach(function(item){ %>
+                                                <% if(data.futureappointment !=undefined &&
+                                                    data.futureappointment.length> 0) { %>
+                                                    <% data.futureappointment.forEach(function(item){ console.log(item)
+                                                        %>
                                                         <div class="col-lg-12">
                                                             <li><b>Patient Name: </b>
                                                                 <%= item.PatientName %>
@@ -63,8 +74,12 @@
                                                                     <%= item.AppointmentDate %> <br />
                                                                         <b>Appointment Time: </b>
                                                                         <%= item.AppointmentTime %> <br />
-                                                                            <a href="/doctorhome/<%= item.AppointmentId %>/accept" class="btn btn-xs btn-confirm">Confirm Appointment</a> &nbsp;
-                                                                            <a href="/doctorhome/<%= item.AppointmentId %>/reject" class="btn btn-xs btn-danger">Reject Appointment</a> <br />
+                                                                            <a href="/doctorhome/<%= item.AppointmentId %>/accept"
+                                                                                class="btn btn-xs btn-confirm">Confirm
+                                                                                Appointment</a> &nbsp;
+                                                                            <a href="/doctorhome/<%= item.AppointmentId %>/reject"
+                                                                                class="btn btn-xs btn-danger">Reject
+                                                                                Appointment</a> <br />
                                                         </div>
                                                         <br />
                                                         <% }); %>
@@ -79,14 +94,18 @@
                                 </div>
                                 <div class="faq-item card">
                                     <div class="faq-header" id="heading2">
-                                        <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><i class="fa fa-caret-right"></i> View Past
-                      Appointments</button>
+                                        <button class="faq-button collapsed" data-toggle="collapse"
+                                            data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><i
+                                                class="fa fa-caret-right"></i> View Past
+                                            Appointments</button>
                                     </div>
 
-                                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                                    <div id="collapse2" class="collapse" aria-labelledby="heading2"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <ol>
-                                                <% if( data.pastappointment !=undefined && data.pastappointment.length) { %>
+                                                <% if( data.pastappointment !=undefined && data.pastappointment.length)
+                                                    { %>
                                                     <% data.pastappointment.forEach(function(item){ %>
                                                         <div class="col-lg-12">
                                                             <li><b>Patient Name: </b>
@@ -110,10 +129,18 @@
                                                                                         <%= item.Medicines %> <br />
                                                                                             <b>Remarks: </b>
                                                                                             <%= item.Remarks %> <br />
-                                                                                                <b>Doctor Signature: </b> <br />
-                                                                                                <img src="<%= item.DoctorSignature %>" width="100" heigth="100" alt="signature"> <br /> <br />
+                                                                                                <b>Doctor Signature:
+                                                                                                </b> <br />
+                                                                                                <img src="<%= item.DoctorSignature %>"
+                                                                                                    width="100"
+                                                                                                    heigth="100"
+                                                                                                    alt="signature">
+                                                                                                <br /> <br />
                                                                                                 <% }else{ %>
-                                                                                                    <a href="/doctorhome/<%= item.PatientId %>/<%= item.AppointmentId %>/addprescription" class="btn btn-xs btn-confirm">Add Prescription</a> <br />
+                                                                                                    <a href="/doctorhome/<%= item.PatientId %>/<%= item.AppointmentId %>/addprescription"
+                                                                                                        class="btn btn-xs btn-confirm">Add
+                                                                                                        Prescription</a>
+                                                                                                    <br />
                                                                                                     <% } %>
                                                         </div>
                                                         <% }); %>
@@ -130,15 +157,19 @@
 
                                 <div class="faq-item card">
                                     <div class="faq-header" id="heading3">
-                                        <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><i class="fa fa-caret-right"></i> Update
-                      Credentials</button>
+                                        <button class="faq-button collapsed" data-toggle="collapse"
+                                            data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><i
+                                                class="fa fa-caret-right"></i> Update
+                                            Credentials</button>
                                     </div>
 
-                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <p>
-                                                <a href="/doctorhome/<%= data.user._id%>/edit" class="btn btn-primary btn-large">Update
-                          Credentials</a>
+                                                <a href="/doctorhome/<%= data.user._id%>/edit"
+                                                    class="btn btn-primary btn-large">Update
+                                                    Credentials</a>
                                             </p>
                                         </div>
                                     </div>
@@ -158,7 +189,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {

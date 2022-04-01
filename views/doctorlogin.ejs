@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="assets/production/css/loginRegister.min.css">
 
@@ -47,10 +47,12 @@
                                     <form action="/doctorlogin" method="POST" accept-charset="utf-8">
                                         <div class="form-row row mt_20">
                                             <div class="form-group col-12">
-                                                <input type="email" class="form-control" placeholder="Email Address" name="username" autocomplete="off" required>
+                                                <input type="email" class="form-control" placeholder="Email Address"
+                                                    name="username" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
-                                                <input type="password" class="form-control" placeholder="Password" name="password" autocomplete="off" required>
+                                                <input type="password" class="form-control" placeholder="Password"
+                                                    name="password" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
                                                 <button type="submit" class="btn" name="form_login">Login</button>
@@ -70,7 +72,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {

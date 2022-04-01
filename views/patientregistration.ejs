@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="assets/production/css/loginRegister.min.css">
 
@@ -37,7 +37,8 @@
                         <div class="contact-form headstyle user-login-tab pt_0">
                             <ul class="nav nav-tabs mt_15" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#" role="tab">Patient Registration</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#" role="tab">Patient
+                                        Registration</a>
                                 </li>
                             </ul>
 
@@ -48,10 +49,13 @@
                                         <div class="form-row row mt_20">
                                             <div class="form-group col-12">
                                                 <p>Name</p>
-                                                <input type="text" class="form-control" placeholder="Name" name="name" autocomplete="off" required>
+                                                <input type="text" class="form-control" placeholder="Name" name="name"
+                                                    autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
-                                                <p>Date of birth </p> <input type="text" placeholder="MM/DD/YYYY" onfocus="(this.type='date')" onblur="(this.type='text')" name="dob" autocomplete="off" required>
+                                                <p>Date of birth </p> <input type="text" placeholder="MM/DD/YYYY"
+                                                    onfocus="(this.type='date')" onblur="(this.type='text')" name="dob"
+                                                    autocomplete="off" required>
                                             </div>
 
                                             <div class="form-group col-12">
@@ -59,28 +63,37 @@
                                                     <p>
                                                         Please enter your address in the textarea
                                                     </p>
-                                                    <textarea class="form-control" id="validationTextarea" placeholder="Address" name="address" autocomplete="off" required></textarea>
+                                                    <textarea class="form-control" id="validationTextarea"
+                                                        placeholder="Address" name="address" autocomplete="off"
+                                                        required></textarea>
 
                                                 </div>
                                             </div>
                                             <div class="form-group col-12">
                                                 <label for="phonenum">Phone Number</label><br />
-                                                <input id="phonenum" type="tel" class="form-control" placeholder="Phone Number (format:+91'xxxxxxxxxx')" name="phone" pattern="^\d{10}$" minlength="10" autocomplete="off" required>
+                                                <input id="phonenum" type="tel" class="form-control"
+                                                    placeholder="Phone Number (format:+91'xxxxxxxxxx')" name="phone"
+                                                    pattern="^\d{10}$" minlength="10" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
                                                 <p>Email Address</p>
-                                                <input type="email" class="form-control" placeholder="Email Address" name="username" autocomplete="off" required>
+                                                <input type="email" class="form-control" placeholder="Email Address"
+                                                    name="username" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
                                                 <p>Set your password</p>
-                                                <input type="password" class="form-control" placeholder="Password" name="password" autocomplete="off" required>
+                                                <input type="password" class="form-control" placeholder="Password"
+                                                    name="password" autocomplete="off" required>
                                             </div>
                                             <div class="form-group col-12">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                                                <label class="form-check-label" for="exampleCheck1">I have read the terms and conditions</label>
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1"
+                                                    required>
+                                                <label class="form-check-label" for="exampleCheck1">I have read the
+                                                    terms and conditions</label>
                                             </div>
                                             <div class="form-group col-12">
-                                                <button type="submit" class="btn" name="form_registration">Register</button>
+                                                <button type="submit" class="btn"
+                                                    name="form_registration">Register</button>
                                             </div>
                                         </div>
                                     </form>
@@ -97,7 +110,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {
