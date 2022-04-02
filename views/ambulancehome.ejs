@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="assets/production/css/loginRegister.min.css">
 
@@ -42,13 +42,23 @@
                         <div class="faq-group headstyle mt-30 contact-form">
                             <div id="accordion">
                                 <div class="faq-item card">
+                                    <style>
+                                        .faq-header button.faq-button.collapsed:hover,
+                                        .faq-header button.faq-button {
+                                            background: rgb(16, 165, 115);
+                                        }
+                                    </style>
                                     <div class="faq-header" id="heading1">
-                                        <button class="faq-button " data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><i class="fa fa-caret-right"></i> View Current Bookings </button>
+                                        <button class="faq-button " data-toggle="collapse" data-target="#collapse1"
+                                            aria-expanded="true" aria-controls="collapse1"><i
+                                                class="fa fa-caret-right"></i> View Current Bookings </button>
                                     </div>
-                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                                    <div id="collapse1" class="collapse show" aria-labelledby="heading1"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <ol>
-                                                <% if( data.futurebooking !=undefined && data.futurebooking.length> 0) { %>
+                                                <% if( data.futurebooking !=undefined && data.futurebooking.length> 0) {
+                                                    %>
                                                     <% data.futurebooking.forEach(function(item){ %>
                                                         <div class="col-lg-12">
                                                             <li><b>Patient Name: </b>
@@ -66,14 +76,27 @@
                                                                             <%= item.Time %> <br />
                                                                                 <b>Journey Status: </b>
                                                                                 <%= item.JourneyStatus %> <br />
-                                                                                    <% if(item.BookingStatus=="Yet to be confirmed" ) {%>
-                                                                                        <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/accept" class="btn btn-xs btn-confirm">Confirm Booking</a> <br />
-                                                                                        <% }else if (item.JourneyStatus=="Started" &&
-                                              item.AmbulanceId.equals(data.user._id)) { %>
-                                                                                            <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/endjourney" class="btn btn-xs btn-danger">End Journey</a> <br />
-                                                                                            <% }else if(item.BookingStatus=="Accepted" &&
-                                                item.AmbulanceId.equals(data.user._id)) { %>
-                                                                                                <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/startjourney" class="btn btn-xs btn-info">Start Journey</a> <br />
+                                                                                    <% if(item.BookingStatus=="Yet to be confirmed"
+                                                                                        ) {%>
+                                                                                        <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/accept"
+                                                                                            class="btn btn-xs btn-confirm">Confirm
+                                                                                            Booking</a> <br />
+                                                                                        <% }else if
+                                                                                            (item.JourneyStatus=="Started"
+                                                                                            &&
+                                                                                            item.AmbulanceId.equals(data.user._id))
+                                                                                            { %>
+                                                                                            <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/endjourney"
+                                                                                                class="btn btn-xs btn-danger">End
+                                                                                                Journey</a> <br />
+                                                                                            <% }else
+                                                                                                if(item.BookingStatus=="Accepted"
+                                                                                                &&
+                                                                                                item.AmbulanceId.equals(data.user._id))
+                                                                                                { %>
+                                                                                                <a href="/ambulancehome/<%= data.user._id %>/<%= item.BookingId %>/startjourney"
+                                                                                                    class="btn btn-xs btn-info">Start
+                                                                                                    Journey</a> <br />
                                                                                                 <% } %>
                                                         </div>
                                                         <br />
@@ -89,11 +112,14 @@
                                 </div>
                                 <div class="faq-item card">
                                     <div class="faq-header" id="heading2">
-                                        <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><i class="fa fa-caret-right"></i> View Past
-                      Bookings</button>
+                                        <button class="faq-button collapsed" data-toggle="collapse"
+                                            data-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><i
+                                                class="fa fa-caret-right"></i> View Past
+                                            Bookings</button>
                                     </div>
 
-                                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                                    <div id="collapse2" class="collapse" aria-labelledby="heading2"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <ol>
                                                 <% if(data.pastbooking !=undefined && data.pastbooking.length> 0) { %>
@@ -129,15 +155,19 @@
 
                                 <div class="faq-item card">
                                     <div class="faq-header" id="heading3">
-                                        <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><i class="fa fa-caret-right"></i> Update
-                      Credentials</button>
+                                        <button class="faq-button collapsed" data-toggle="collapse"
+                                            data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><i
+                                                class="fa fa-caret-right"></i> Update
+                                            Credentials</button>
                                     </div>
 
-                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3"
+                                        data-parent="#accordion">
                                         <div class="faq-body">
                                             <p>
-                                                <a href="/ambulancehome/<%= data.user._id%>/edit" class="btn btn-primary btn-large">Update
-                          Credentials</a>
+                                                <a href="/ambulancehome/<%= data.user._id%>/edit"
+                                                    class="btn btn-primary btn-large">Update
+                                                    Credentials</a>
                                             </p>
                                         </div>
                                     </div>
@@ -157,7 +187,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {

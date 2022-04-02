@@ -5,7 +5,7 @@
     <!--Meta Data-->
     <%- include('partial/title.ejs'); %>
 
-        <% if (data.NODE_ENV == 'production') { %>
+        <% if (data.NODE_ENV=='production' ) { %>
             <!-- Production Stylesheets -->
             <link rel="stylesheet" href="/assets/production/css/appointmentbooking3.min.css">
 
@@ -43,28 +43,30 @@
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="patientRegistration" role="tabpanel">
-                                    <form action="/patienthome/bookappointment/<%= data.patientid%>" method="POST" accept-charset="utf-8">
+                                    <form action="/patienthome/bookappointment/<%= data.patientid%>" method="POST"
+                                        accept-charset="utf-8">
                                         <div class="form-row row mt_20">
                                             <div class="form-row row mt_20 text-center">
                                                 <div class="form-group col-12">
                                                     <div class="mb-3">
                                                         <p>Please select the doctor type</p>
                                                         <select id="disease" name="disease" required required>
-                              <option value="Ent">ENT Specialist</option>
-                              <option value="Skin">Skin Specialist</option>
-                              <option value="Dentist">Dentist</option>
-                              <option value="Heart">Heart Specialist</option>
-                              <option value="Lung">Lung Specialist</option>
-                              <option value="Neuro">Neuro Specialist</option>
-                              <option value="Neuro">Gastro Specialist</option>
-                              <option value="Neuro">Infection Specialist</option>
-                              <option value="Neuro">Nephro Specialist</option>
-                              <option value="Neuro">obstetro Specialist</option>
-                            </select>
+                                                            <option value="Ent">ENT Specialist</option>
+                                                            <option value="Skin">Skin Specialist</option>
+                                                            <option value="Dentist">Dentist</option>
+                                                            <option value="Heart">Heart Specialist</option>
+                                                            <option value="Lung">Lung Specialist</option>
+                                                            <option value="Neuro">Neuro Specialist</option>
+                                                            <option value="Neuro">Gastro Specialist</option>
+                                                            <option value="Neuro">Infection Specialist</option>
+                                                            <option value="Neuro">Nephro Specialist</option>
+                                                            <option value="Neuro">obstetro Specialist</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-12 text-center mb-3">
-                                                    <button type="submit" class="btn" name="form_registration"> Next </button>
+                                                    <button type="submit" class="btn" name="form_registration"> Next
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +84,7 @@
 
             <script>
                 var i = 0;
-                var txt = 'WELCOME TO UPPOINTED';
+                var txt = 'WELCOME TO UPPOINT';
                 var speed = 60;
 
                 function typeWriter() {
