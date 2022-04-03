@@ -174,8 +174,12 @@
 
                         // CurrentBookingDate: chosen date on calendar
                         let CurrentBookingDate = new Date(data.date);
+                        console.log('current booking date: ', CurrentBookingDate);
+
+                        console.log('current time: ', CurrentBookingDate.getTime())
 
                         let ModifiedCurrentBookingDate = new Date(CurrentBookingDate.getTime() - CurrentBookingDate.getTime() % 86400000);
+                        console.log('modified current booking date: ', ModifiedCurrentBookingDate);
 
                         for (const property in listpatient) {
                             let LoopBookingDate = new Date(property);
@@ -229,6 +233,8 @@
                         day: 'thursday'
                     }, {
                         day: 'friday'
+                    }, {
+                        day: 'saturday'
                     }]
                     calendar.set({
                         availableWeekDays: days,
@@ -320,3 +326,11 @@
 </body>
 
 </html>
+
+
+<!-- 
+    
+let date = new Date(new Date().getTime() + 15 * 60 * 1000);
+let time = date.getTime(); 
+
+-->
